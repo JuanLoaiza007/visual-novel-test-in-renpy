@@ -88,7 +88,9 @@ define gui.title_text_font = "BatmanForever.ttf"
 ## Menú principal y menús del juego ############################################
 
 ## Imágenes del menú principal y menús del juego.
-define gui.main_menu_background = "gui/main_menu.png"
+# Original
+# define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = Movie(play = "movies/batman-loop.webm", loop = True)
 define gui.game_menu_background = "gui/game_menu.png"
 
 
