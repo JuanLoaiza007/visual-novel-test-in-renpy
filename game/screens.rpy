@@ -30,6 +30,7 @@ style button:
 
 style button_text is gui_text:
     properties gui.text_properties("button")
+    xalign 0.5
     yalign 0.5
 
 
@@ -290,7 +291,7 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.6
+        yalign 0.7
 
         spacing gui.navigation_spacing
 
@@ -395,7 +396,7 @@ style main_menu_vbox:
     xalign 0.02
     xoffset 0
     xmaximum 300
-    yalign 0.06
+    yalign 0.2
     yoffset 0
 
 style main_menu_version_vbox:
