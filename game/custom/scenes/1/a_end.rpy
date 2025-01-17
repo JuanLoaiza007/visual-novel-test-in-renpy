@@ -1,5 +1,5 @@
 label s1_end:
-  joker "Bruce... {w=5} ahora tienes [dinero] dólares."
+  joker "[mc_name]... {w=2} ahora tienes [dinero] dólares."
   joker "XD"
 
   pause 2

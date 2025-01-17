@@ -15,18 +15,18 @@ label s1_start:
 
   play sound "fx-transition.mp3"
   show joker normal at right with dissolve
-  joker "Hola Bruce."
+  joker "Hola [mc_name]."
   joker "No soy tu joker."
-  joker "Bruce, tienes [dinero] dólares."
+  joker "[mc_name], tienes [dinero] dólares."
   joker "Te daré 100 más."
 
   $ dinero += 100
 
-  joker "Bruce, ahora tienes [dinero] dólares."
+  joker "[mc_name], ahora tienes [dinero] dólares."
 
   joker "Dime, murciélago… ¿qué es verde, redondo y grita cuando lo tiras por las escaleras?"
 
-  batman "{i}Suspira profundamente{/i}..."
+  batman "* Suspira profundamente *"
 
   menu:
     "Un pepinillo filosófico.":
