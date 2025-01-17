@@ -253,9 +253,9 @@ screen quick_menu():
             textbutton _("Saltar") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Guardar") action ShowMenu('save')
-            textbutton _("Guardar R.") action QuickSave()
-            textbutton _("Cargar R.") action QuickLoad()
-            textbutton _("Prefs.") action ShowMenu('preferences')
+            # textbutton _("Guardar R.") action QuickSave()
+            # textbutton _("Cargar R.") action QuickLoad()
+            textbutton _("Menú") action ShowMenu('preferences')
 
 
 ## Este código asegura que la pantalla 'quick_menu' se muestra en el juego,
@@ -290,21 +290,21 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        yalign 0.6
 
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("Comenzar") action Start()
+            textbutton _("Nuevo juego") action Start()
 
         else:
 
             textbutton _("Historial") action ShowMenu("history")
 
-            textbutton _("Guardar") action ShowMenu("save")
+            textbutton _("Guardar partida") action ShowMenu("save")
 
-        textbutton _("Cargar") action ShowMenu("load")
+        textbutton _("Cargar partida") action ShowMenu("load")
 
         textbutton _("Opciones") action ShowMenu("preferences")
 
@@ -316,7 +316,9 @@ screen navigation():
 
             textbutton _("Menú principal") action MainMenu()
 
-        textbutton _("Acerca de") action ShowMenu("about")
+        if main_menu:
+
+            textbutton _("Acerca de") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
@@ -367,8 +369,11 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
+            text "{font=[gui.title_text_font]}[config.name!t]{/font}":
                 style "main_menu_title"
+
+        vbox:
+            style "main_menu_version_vbox"
 
             text "[config.version]":
                 style "main_menu_version"
@@ -387,6 +392,13 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
+    xalign 0.02
+    xoffset 0
+    xmaximum 300
+    yalign 0.06
+    yoffset 0
+
+style main_menu_version_vbox:
     xalign 1.0
     xoffset -30
     xmaximum 1200
@@ -521,7 +533,7 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
+    xpos 60
     ysize 180
 
 style game_menu_label_text:

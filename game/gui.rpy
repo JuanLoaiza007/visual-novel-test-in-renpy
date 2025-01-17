@@ -29,13 +29,13 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#ffffff'
 
 ## El color del botón de texto cuando no está seleccionado ni enfocado.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#ffffff'
 
 ## El color 'small' se usa para el texto pequeño, que necesita destacar más.
 define gui.idle_small_color = '#aaaaaa'
 
 ## El color usado en botones y barras que ganan foco.
-define gui.hover_color = '#c20000'
+define gui.hover_color = '#ffb8b8'
 
 ## El color del botón de texto seleccionado pero no enfocado. Un botón está
 ## seleccionado si indica el valor actual de la pantalla o preferencia.
@@ -63,7 +63,7 @@ define gui.text_font = "NunitoSans.ttf"
 define gui.name_text_font = "NunitoSans.ttf"
 
 ## El tipo de letra del texto externo al juego.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "NunitoSans.ttf"
 
 ## El tamaño normal del texto del diálogo.
 define gui.text_size = 33
@@ -72,7 +72,7 @@ define gui.text_size = 33
 define gui.name_text_size = 45
 
 ## El tamaño del texto en la interfaz.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 40
 
 ## El tamaño de etiquetas en la interfaz.
 define gui.label_text_size = 36
@@ -81,7 +81,8 @@ define gui.label_text_size = 36
 define gui.notify_text_size = 24
 
 ## El tamaño del título del juego.
-define gui.title_text_size = 75
+define gui.title_text_size = 70
+define gui.title_text_font = "BatmanForever.ttf"
 
 
 ## Menú principal y menús del juego ############################################
@@ -276,7 +277,7 @@ define gui.page_spacing = 0
 define gui.slot_spacing = 15
 
 ## Posición del texto del menú principal.
-define gui.main_menu_text_xalign = 1.0
+define gui.main_menu_text_xalign = 0.5
 
 
 ## Marcos ######################################################################
