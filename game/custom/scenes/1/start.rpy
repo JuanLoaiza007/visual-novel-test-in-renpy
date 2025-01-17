@@ -10,6 +10,10 @@ label s1_start:
   pause 1
 
   show batman normal at left with dissolve
+  batman "Hoy me gustaría cambiar mi nombre de superheroe."
+  $ mc_name = renpy.input("¿Cómo te llamas?", default="Batman")
+  batman "¡[mc_name]!{w=1}... {w=2}Bueno, luego podré cambiarlo."
+  
   batman "Parece una noche tranquila." with dissolve
 
   show joker shadow at right with dissolve 
@@ -22,9 +26,13 @@ label s1_start:
   joker "Hola [mc_name]."
   joker "No soy tu joker."
   joker "[mc_name], tienes [dinero] dólares."
+  
+  show screen dinero_display
+
   joker "Te daré 300 más."
 
   $ dinero += 300
+  show screen dinero_display
 
   joker "[mc_name], ahora tienes [dinero] dólares."
 
@@ -39,6 +47,9 @@ label s1_start:
   jump jokers_questionary
 
   return
+
+screen dinero_display():
+    text "Dinero: [dinero]" xpos 0.5 ypos 0.1 color "#FFFFFF" size 50 font "fonts/BatmanForever.ttf"
 
 label jokers_questionary:
     joker "Dime [mc_name]… ¿qué es verde, redondo y grita cuando lo tiras por las escaleras?"
@@ -69,4 +80,5 @@ label s1_opt_nice:
 label s1_opt_bad:
     joker "BEW! {w=1} Error{w=1}, se ha retirado 100 de su cartera [mc_name]"
     $ dinero -= 100 
+    show screen dinero_display
     jump jokers_questionary
