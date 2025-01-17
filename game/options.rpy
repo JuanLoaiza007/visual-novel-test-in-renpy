@@ -13,7 +13,7 @@
 ##
 ## El _() que rodea la cadena de texto la señala como traducible.
 
-define config.name = _("test visual novel")
+define config.name = _("Batman and Joker (VN-Test)")
 
 
 ## Determina si el título dado más arriba se muestra en el menú principal.
@@ -31,6 +31,7 @@ define config.version = "1.0"
 ## comillas triples y deja una línea en blanco entre párrafos.
 
 define gui.about = _p("""
+Este es un videojuego de prueba para probar como hacer una novela visual en RenPy.
 """)
 
 
