@@ -1,6 +1,9 @@
 image bg gotham night: 
   "backgrounds/ghotam_night.jpg"
   zoom 2
+image bg joker gray:
+  "backgrounds/joker-gray.png"
+
 image batman normal: 
   "characters/batman/normal.png"
   zoom 0.8
